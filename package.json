@@ -1,6 +1,6 @@
 {
   "name": "wolkenkit-template-chat",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "wolkenkit-template-chat is a sample application for wolkenkit.",
   "private": true,
   "wolkenkit": {
