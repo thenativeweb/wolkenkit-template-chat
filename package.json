@@ -1,0 +1,57 @@
+{
+  "name": "wolkenkit-template-chat",
+  "version": "0.0.0",
+  "description": "wolkenkit-template-chat is a sample application for wolkenkit.",
+  "private": true,
+  "wolkenkit": {
+    "application": "chat",
+    "runtime": {
+      "version": "1.0.0"
+    },
+    "environments": {
+      "default": {
+        "api": {
+          "address": {
+            "host": "local.wolkenkit.io",
+            "port": 3000
+          },
+          "allowAccessFrom": "*"
+        },
+        "node": {
+          "environment": "development"
+        }
+      },
+      "production": {
+        "api": {
+          "address": {
+            "host": "<your-app>.wolkenkit.io",
+            "port": 443
+          },
+          "allowAccessFrom": [
+            "http://example.com",
+            "https://example.com",
+            "/example\\.com$/"
+          ]
+        },
+        "node": {
+          "environment": "production"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "http-server": "0.10.0"
+  },
+  "scripts": {
+    "start": "wolkenkit start && http-server ./client/ -o",
+    "stop": "wolkenkit stop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/wolkenkit-template-chat.git"
+  },
+  "keywords": [
+    "wolkenkit"
+  ],
+  "license": "LGPL-3.0"
+}
