@@ -19,22 +19,6 @@
         "node": {
           "environment": "development"
         }
-      },
-      "production": {
-        "api": {
-          "address": {
-            "host": "<your-app>.wolkenkit.io",
-            "port": 443
-          },
-          "allowAccessFrom": [
-            "http://example.com",
-            "https://example.com",
-            "/example\\.com$/"
-          ]
-        },
-        "node": {
-          "environment": "production"
-        }
       }
     }
   },
@@ -52,5 +36,5 @@
   "keywords": [
     "wolkenkit"
   ],
-  "license": "LGPL-3.0"
+  "license": "AGPL-3.0"
 }
