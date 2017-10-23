@@ -1,7 +1,7 @@
 {
   "name": "wolkenkit-template-chat",
   "version": "1.0.0",
-  "description": "wolkenkit-template-chat is a sample application for wolkenkit.",
+  "description": "wolkenkit-template-chat is an application template for wolkenkit.",
   "wolkenkit": {
     "application": "chat",
     "runtime": {
@@ -21,13 +21,6 @@
         }
       }
     }
-  },
-  "devDependencies": {
-    "http-server": "0.10.0"
-  },
-  "scripts": {
-    "start": "wolkenkit start && http-server ./client/ -o",
-    "stop": "wolkenkit stop"
   },
   "repository": {
     "type": "git",
