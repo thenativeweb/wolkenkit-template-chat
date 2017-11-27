@@ -20,10 +20,16 @@ Since this template contains a complete application, you can run it without furt
 $ wolkenkit start
 ```
 
-To start the client, run the following command:
+To start the client, first you need to install `http-server` globally:
 
 ```shell
-$ npx http-server ./client/ -o
+$ npm install -g http-server
+```
+
+Then to actually run the client use the following command:
+
+```shell
+$ http-server ./client/ -o
 ```
 
 ## License
