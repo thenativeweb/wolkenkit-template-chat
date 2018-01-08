@@ -7,7 +7,7 @@ const fields = {
 };
 
 const when = {
-  'communication.message.sent': (messages, event, mark) => {
+  'communication.message.sent' (messages, event, mark) {
     messages.add({
       text: event.data.text,
       timestamp: event.metadata.timestamp
@@ -15,7 +15,7 @@ const when = {
     mark.asDone();
   },
 
-  'communication.message.liked': (messages, event, mark) => {
+  'communication.message.liked' (messages, event, mark) {
     messages.update({
       where: { id: event.aggregate.id },
       set: {
