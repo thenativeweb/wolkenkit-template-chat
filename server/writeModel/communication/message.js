@@ -16,24 +16,20 @@ const initialState = {
 };
 
 const commands = {
-  send (message, command, mark) {
+  send (message, command) {
     if (!command.data.text) {
-      return mark.asRejected('Text is missing.');
+      return command.reject('Text is missing.');
     }
 
     message.events.publish('sent', {
       text: command.data.text
     });
-
-    mark.asDone();
   },
 
-  like (message, command, mark) {
+  like (message) {
     message.events.publish('liked', {
       likes: message.state.likes + 1
     });
-
-    mark.asDone();
   }
 };
 

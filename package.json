@@ -6,7 +6,7 @@
   "wolkenkit": {
     "application": "chat",
     "runtime": {
-      "version": "1.0.0"
+      "version": "latest"
     },
     "environments": {
       "default": {
@@ -40,7 +40,7 @@
     }
   },
   "devDependencies": {
-    "http-server": "0.10.0"
+    "http-server": "0.11.1"
   },
   "scripts": {
     "start": "wolkenkit start && http-server ./client/ -o",

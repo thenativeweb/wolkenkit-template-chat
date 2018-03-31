@@ -7,22 +7,20 @@ const fields = {
 };
 
 const when = {
-  'communication.message.sent': (messages, event, mark) => {
+  'communication.message.sent': (messages, event) => {
     messages.add({
       text: event.data.text,
       timestamp: event.metadata.timestamp
     });
-    mark.asDone();
   },
 
-  'communication.message.liked': (messages, event, mark) => {
+  'communication.message.liked': (messages, event) => {
     messages.update({
       where: { id: event.aggregate.id },
       set: {
         likes: event.data.likes
       }
     });
-    mark.asDone();
   }
 };
 
