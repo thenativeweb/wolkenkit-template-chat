@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const dom = {
+  const view = {
     messages: document.querySelector('.messages'),
     newMessage: document.querySelector('.new-message'),
     sendMessageForm: document.querySelector('.send-message-form'),
@@ -17,9 +17,9 @@
         </li>`
       ).join('');
 
-      dom.messages.innerHTML = html;
+      view.messages.innerHTML = html;
     }
   };
 
-  window.dom = dom;
+  window.view = view;
 })();
