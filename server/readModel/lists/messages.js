@@ -6,7 +6,7 @@ const fields = {
   timestamp: { initialState: 0, fastLookup: true }
 };
 
-const when = {
+const projections = {
   'communication.message.sent' (messages, event) {
     messages.add({
       text: event.data.text,
@@ -24,4 +24,4 @@ const when = {
   }
 };
 
-module.exports = { fields, when };
+module.exports = { fields, projections };
