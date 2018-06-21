@@ -6,24 +6,22 @@ const fields = {
   timestamp: { initialState: 0, fastLookup: true }
 };
 
-const when = {
-  'communication.message.sent' (messages, event, mark) {
+const projections = {
+  'communication.message.sent' (messages, event) {
     messages.add({
       text: event.data.text,
       timestamp: event.metadata.timestamp
     });
-    mark.asDone();
   },
 
-  'communication.message.liked' (messages, event, mark) {
+  'communication.message.liked' (messages, event) {
     messages.update({
       where: { id: event.aggregate.id },
       set: {
         likes: event.data.likes
       }
     });
-    mark.asDone();
   }
 };
 
-module.exports = { fields, when };
+module.exports = { fields, projections };
