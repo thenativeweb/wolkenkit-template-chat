@@ -5,7 +5,7 @@
   "wolkenkit": {
     "application": "chat",
     "runtime": {
-      "version": "latest"
+      "version": "3.0.0"
     },
     "environments": {
       "default": {
