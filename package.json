@@ -10,10 +10,6 @@
     "environments": {
       "default": {
         "api": {
-          "address": {
-            "host": "local.wolkenkit.io",
-            "port": 3000
-          },
           "allowAccessFrom": "*"
         },
         "fileStorage": {
