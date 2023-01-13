@@ -9,7 +9,7 @@
   "devDependencies": {
     "html-webpack-plugin": "3.2.0",
     "webpack": "4.25.1",
-    "webpack-cli": "3.1.2",
+    "webpack-cli": "3.3.12",
     "webpack-serve": "2.0.2",
     "wolkenkit-client": "2.0.0"
   }
